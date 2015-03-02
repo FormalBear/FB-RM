@@ -1,0 +1,64 @@
+#pragma strict
+
+var R : int;
+var reg_num : int[];
+var reg_tile : int[];
+var reg_type : String[];
+var reg_strg : String[];
+var map : boolean[];
+var rt : int;
+var rs : int;
+var Rs : int;
+
+function Start () 
+{
+
+map = new boolean[800];
+reg_type = new String[8];
+
+for(var x : int = 0; x <= 799; x++)
+    {
+    
+    map[x] = true;
+    
+    }
+
+reg_type[0] = "Mountain";
+reg_type[1] = "Hill";
+reg_type[2] = "Plain";
+reg_type[3] = "Desert";
+reg_type[4] = "Forest";
+reg_type[5] = "Lake";
+reg_type[6] = "Swamp";
+reg_type[7] = "Tundra";
+
+R = Random.Range(3,20);
+Debug.Log("R is " + R);
+Rs = R - 1;
+
+reg_num = new int[R];
+reg_tile = new int[R];
+reg_strg = new String[R];
+
+for(var g : int = 0; g <= Rs; g++)
+    {
+
+    rt = Random.Range(1,8);
+    Debug.Log("rt is " + rt);
+    rs = Random.Range(5,40);
+    Debug.Log("rs is " + rs);
+    
+    reg_num[g] = rt;
+    reg_tile[g] = rs;
+    reg_strg[g] = reg_type[rt];
+    Debug.Log("reg_num[" + g + "] = " + rt);
+    Debug.Log("reg_tile[" + g + "] = " + rs);
+    Debug.Log("reg_strg[" + g + "] = " + reg_type[rt]);
+
+    }
+
+}
+
+function Update () {
+
+}
