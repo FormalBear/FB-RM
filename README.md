@@ -1,2 +1,2 @@
 # FB-RM
-Random Map - Random Immersion 01
+Formal Bear Random Immersion Game Project
